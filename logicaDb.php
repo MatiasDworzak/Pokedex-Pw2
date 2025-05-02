@@ -13,10 +13,12 @@ function traerPokemonsDeLaDb()
         $name = $entry['nombre'];
         $type = $entry['tipo'];
         $des = $entry['descripcion'];
+        $img = $entry['Imagen'];
 
-        $pokemon = new Pokemon($num, $name, $type, $des);
+        $pokemon = new Pokemon($num, $name, $type, $des, $img);
         $arrayPokemons[$num] = $pokemon;
     }
+
 
     return $arrayPokemons;
 //    foreach ($arrayPokemons as $poke){
